@@ -1,0 +1,21 @@
+.list {
+  .list__column-header {
+    background-color: #5a8dc3;
+    // background-image: linear-gradient(to bottom, #5a8dc3, #49719c);
+    background-color: #103863;
+    color: #fff;
+    .list__column-header__cell {
+      &.checkbox-cell {
+        width: 10px;
+      }
+      padding: 5px 10px;
+      border-right: 1px solid #818182;
+      cursor: pointer;
+      .control_checkbox {
+        label {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

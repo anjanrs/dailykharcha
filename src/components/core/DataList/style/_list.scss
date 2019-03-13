@@ -1,0 +1,12 @@
+.list {
+  height: 100%;
+  position: relative;
+}
+.zoomIn {
+  transition-duration: 3000ms;
+  opacity: 1;
+}
+.zoomOut {
+  transition-duration: 3000ms;
+  opacity: 0;
+}

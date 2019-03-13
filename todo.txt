@@ -1,0 +1,33 @@
+
+1) get username and display text with welcome mesage for username
+14) data visualization  use graphal for it
+9) Implement test
+
+7) fix null parent id and compare on update and delete
+
+
+
+
+
+
+Refinments:
+
+1) Improve UI for nav and the list pages => contineous 
+10) Allow customization of hide or show of the other filters 
+based on the filter values
+12) add proper comments
+13) implement auto documentation tool
+
+
+1) On Hitting enter on the textbox filter keep the curson in the textbox
+2) the select dropdown should not contain the selfid to select the parent field 
+3) add scroll for list and fix position the header on scroll
+4) implement flow/typescript (for type checking)
+1) extract jwt and store group and access info on redux/implement exract function to
+
+
+Dependencies of DataList:
+1) Fontawesome icons are import outside datalist component in app.js
+2) depends on api utils
+3) React Tostify ToastContainer is placed in App.js
+4) Validations Utils

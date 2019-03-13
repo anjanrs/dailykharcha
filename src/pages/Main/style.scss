@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+
+  //for horizontal menu
+  flex-direction: column;
+  height: 100vh;
+  .main__content {
+    // float: left;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    .page-header {
+    }
+    .page-content {
+      flex: 1;
+    }
+  }
+}

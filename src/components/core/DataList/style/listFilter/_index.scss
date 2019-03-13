@@ -1,0 +1,64 @@
+.list {
+  .list__filter {
+    width: 100%;
+    background-color: #49719c;
+    background-color: #4875a5;
+    padding: 5px 10px;
+    display: table;
+    display: flex;
+    flex-direction: column;
+    .list_filter__controls-wrapper {
+      float: right;
+      .list_filter--label {
+        color: #fff;
+        display: block;
+      }
+      .list__filter__control {
+        float: left;
+        padding: 5px;
+        .control_textbox {
+          input {
+            line-height: 20px;
+            padding: 0 4px;
+          }
+        }
+        .control_checkbox,
+        .control_radiobutton {
+          padding: 0 10px;
+          label {
+            cursor: pointer;
+            color: #fff;
+            padding: 0 10px;
+            position: relative;
+            input {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+    .list-filter__btn_wrapper {
+      float: right;
+      .btn-cmd--search {
+        float: left;
+        color: #fff;
+        cursor: pointer;
+        margin-top: 5px;
+        width: 100px;
+        &:hover {
+          font-weight: bold;
+        }
+      }
+      .btn-cmd--search-reset {
+        float: left;
+        color: #fff;
+        cursor: pointer;
+        margin-top: 5px;
+        width: 100px;
+        &:hover {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.list {
+  .list__pagination {
+    background-color: #dee2e6;
+    position: absolute;
+    bottom: 0;
+    display: table;
+    width: 100%;
+
+    border-bottom: 1px solid #818182;
+    list-style: none;
+    margin: 0;
+    padding: 5px 10px;
+    .list__pagination--info {
+      float: left;
+    }
+    .list__pagination--paging {
+      float: right;
+      .list__pagination__previous,
+      .list__pagination__next {
+        display: block;
+        float: left;
+        text-decoration: underline;
+        cursor: pointer;
+        &.active {
+          text-decoration: none;
+          cursor: auto;
+        }
+      }
+
+      ul.list__pagination__numbers {
+        padding: 0 10px;
+        display: block;
+        float: left;
+        margin: 0;
+        li {
+          display: block;
+          float: left;
+          padding: 0 5px;
+          cursor: pointer;
+          text-decoration: underline;
+          &.active {
+            font-weight: bold;
+            text-decoration: none;
+            // color: grey;
+            cursor: auto;
+          }
+        }
+      }
+      select.list__pagination_rowsPerPage {
+        float: right;
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+}

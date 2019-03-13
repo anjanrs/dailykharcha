@@ -1,0 +1,45 @@
+.list {
+  .list__header {
+    background-color: #151f29;
+    background-color: #49719c;
+    background-color: #103863;
+    background-image: linear-gradient(to bottom, #103863, #49719c);
+    background-image: linear-gradient(to bottom, #5a8dc3, #49719c);
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    .list__title {
+      flex: 1;
+    }
+    .list__bulk-actions {
+      display: flex;
+      color: #dcd5dc;
+      .btn-cmd {
+        padding: 0 5px;
+        cursor: pointer;
+        width: 85px;
+        border-radius: 8px;
+        padding: 5px;
+        text-align: center;
+        margin: 0 5px;
+        background-color: #2a67a9;
+        &.btn-cmd--bulk-save {
+          width: 100px;
+        }
+        &.btn-cmd--bulk-add-new {
+          width: 105px;
+        }
+        &.btn-cmd--bulk-cancel {
+          width: 90px;
+        }
+        &.active {
+          color: #fff;
+          background-color: #094688;
+          &:hover {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

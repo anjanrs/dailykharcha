@@ -1,0 +1,43 @@
+.list {
+  .list__body {
+    .list__row {
+      &.invalid {
+        .action__column {
+          vertical-align: top;
+          padding-top: 5px;
+        }
+      }
+      .action__column {
+        .btn-cmd {
+          float: left;
+          margin: 0 5px;
+          color: grey;
+          &.btn-cmd--delete {
+            &.active {
+              color: #ec4444;
+              &:hover {
+                color: #ec0a0a;
+              }
+            }
+          }
+          &.btn-cmd--save {
+            &.active {
+              color: #0c5ebb;
+              &:hover {
+                color: blue;
+              }
+            }
+          }
+          &.btn-cmd--cancel {
+            &.active {
+              color: #06b106;
+              &:hover {
+                color: green;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

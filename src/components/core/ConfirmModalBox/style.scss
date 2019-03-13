@@ -1,0 +1,37 @@
+.modal-box__wrapper {
+  .modal-box__content {
+    .btn-cmd--close {
+      position: absolute;
+      right: 5px;
+      top: 2px;
+      cursor: pointer;
+    }
+    .confirm-box__message {
+      text-align: center;
+      color: #212529;
+      font-weight: bold;
+      padding: 20px 0 0;
+    }
+    .confirm-box__btns-wrapper {
+      display: block;
+      text-align: center;
+      padding: 20px 0;
+      .btn-cmd {
+        display: inline;
+        background-color: #0d48b9;
+        // background: #49719c;
+        // background-image: linear-gradient(to bottom, #5a8dc3, #49719c);
+
+        padding: 5px 20px;
+        border-radius: 4px;
+        color: #fff;
+        margin: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+          background: #0058ff;
+        }
+      }
+    }
+  }
+}

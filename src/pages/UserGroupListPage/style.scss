@@ -1,0 +1,29 @@
+#usergrouplist-editaccess-modal {
+  &.modal-box__wrapper {
+    .modal-box__content-wrapper {
+      padding: 0;
+      .detail__body {
+        .detail__row {
+          .detail__field-label {
+            width: 20%;
+            vertical-align: top;
+          }
+          .detail__field-control {
+            width: 80%;
+
+            .control_checkbox {
+              label {
+                float: left;
+                padding-right: 20px;
+                vertical-align: bottom;
+                input {
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

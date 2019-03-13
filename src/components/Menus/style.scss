@@ -1,0 +1,34 @@
+.menu-wrapper {
+  padding: 20px 0;
+
+  color: #fff;
+  width: 100%;
+  width: 300px;
+  height: 100%;
+  float: left;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+    li {
+      padding: 0 10px;
+      margin: 0;
+      a {
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+          font-weight: bold;
+        }
+      }
+      &.menu-has-children {
+        & > a {
+          cursor: auto;
+          &:hover {
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}

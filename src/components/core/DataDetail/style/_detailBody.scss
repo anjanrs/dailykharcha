@@ -1,0 +1,21 @@
+.detail {
+  .detail__body {
+    display: table;
+    padding: 5px;
+    .detail__row {
+      display: table-row;
+
+      .detail__field-label {
+        padding: 10px;
+        display: table-cell;
+        font-weight: bold;
+      }
+      .detail__field-control {
+        padding: 10px;
+        display: table-cell;
+        .control {
+        }
+      }
+    }
+  }
+}
