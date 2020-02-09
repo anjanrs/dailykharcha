@@ -2,8 +2,9 @@
   display: flex;
 
   //for horizontal menu
-  flex-direction: column;
-  height: 100vh;
+  // flex-direction: column;
+  min-height: 100vh;
+  position: relative;
   .main__content {
     // float: left;
     width: 100%;
@@ -14,6 +15,10 @@
     }
     .page-content {
       flex: 1;
+      background-color: #f1f1f1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
     }
   }
 }

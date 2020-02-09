@@ -9,6 +9,7 @@ import ExpenseDetail from "./ExpenseDetail";
 const ExpenseDetailPage = props => {
   return (
     <div className="page-content">
+      <h1>Expense Detail</h1>
       <ExpenseDetail {...props} />
     </div>
   );

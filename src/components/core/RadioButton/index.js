@@ -18,7 +18,7 @@ const renderRadioButton = ({
             name={name}
             type="radio"
             value={option.value}
-            checked={shouldChecked(option.value, value)}
+            checked={shouldBeChecked(option.value, value)}
             onChange={handleOnChange}
           />
           <span>{option.displayValue}</span>
@@ -83,6 +83,6 @@ RadioButton.defaultProps = {
 
 export default RadioButton;
 
-export const shouldChecked = (optionValue = "", value = []) => {
+export const shouldBeChecked = (optionValue = "", value = []) => {
   return _.includes(value, optionValue);
 };

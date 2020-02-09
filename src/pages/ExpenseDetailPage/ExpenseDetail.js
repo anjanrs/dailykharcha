@@ -17,7 +17,6 @@ export default compose(
       name: "expense-detail",
       fields: DetailFields,
       endpoints,
-      title: "Expense",
       afterSaveURL: "/list/daily-expense-detail",
       afterDeleteURL: "/list/daily-expense-detail",
       addNewURL: "/add-detail/expense",

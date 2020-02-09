@@ -1,14 +1,14 @@
 import React from "react";
 import { reduxForm, Field } from "redux-form";
 import { connect } from "react-redux";
-import { withProps, compose } from "recompose";
+import { withProps, compose, pure } from "recompose";
 
 import { authActions } from "../../redux/modules/auth";
 import "./style.scss";
 
 const LoginPage = props => {
   //handleSubmit event handler provided by reduxForm
-  const { handleSubmit, onSubmit } = props;
+  const { auth, handleSubmit, onSubmit } = props;
   return (
     <div className="container">
       <div className="row">
@@ -18,6 +18,14 @@ const LoginPage = props => {
               <div className="form-group">
                 <div className="login-header">Log In</div>
               </div>
+              
+              {!auth.get('processing') && auth.get('errorMessage') &&
+              (<div className="from-group row login-error">
+                <label> 
+                {auth.get('errorMessage')}!!!
+                Please check username and password.
+                </label>
+              </div>)}
               <div className="form-group row">
                 <label htmlFor="email" className="col-3">
                   Email
@@ -79,5 +87,6 @@ export default compose(
       }
     };
   }),
-  reduxForm({ form: "loginForm" })
+  reduxForm({ form: "loginForm" }),
+  pure
 )(LoginPage);

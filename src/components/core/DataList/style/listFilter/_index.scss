@@ -1,16 +1,16 @@
 .list {
   .list__filter {
     width: 100%;
-    background-color: #49719c;
-    background-color: #4875a5;
-    padding: 5px 10px;
+    // background-color: #49719c;
+    // background-color: #4875a5;
+    padding: 10px 0;
     display: table;
     display: flex;
     flex-direction: column;
     .list_filter__controls-wrapper {
       float: right;
       .list_filter--label {
-        color: #fff;
+        color: #0073aa;
         display: block;
       }
       .list__filter__control {
@@ -27,7 +27,7 @@
           padding: 0 10px;
           label {
             cursor: pointer;
-            color: #fff;
+            color: #0073aa;
             padding: 0 10px;
             position: relative;
             input {
@@ -41,22 +41,46 @@
       float: right;
       .btn-cmd--search {
         float: left;
-        color: #fff;
+        color: #0073aa;
         cursor: pointer;
         margin-top: 5px;
-        width: 100px;
+        margin-right: 20px;
         &:hover {
-          font-weight: bold;
+          // background-color: #094688;
+          position: relative;
+          display: block;
+          &:before {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: #0073aa;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+
         }
       }
       .btn-cmd--search-reset {
         float: left;
-        color: #fff;
+        color: #0073aa;
         cursor: pointer;
         margin-top: 5px;
-        width: 100px;
+        
         &:hover {
-          font-weight: bold;
+          // background-color: #094688;
+          position: relative;
+          display: block;
+          &:before {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: #0073aa;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+
         }
       }
     }

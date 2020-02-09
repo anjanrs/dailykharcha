@@ -99,6 +99,7 @@ const renderDataList = ({
           showDeleteAllButton={showDeleteAllButton}
           showAddNewButton={showAddNewButton}
         />
+        <div className="list-body-pagination--wrapper">
         <DataListBody
           primaryField={primaryField}
           columns={datalistState.get("columns")}
@@ -132,6 +133,7 @@ const renderDataList = ({
           onPageChange={handlePageChange}
           onRowsPerPageChange={handleRowsPerPageChange}
         />
+        </div>
       </div>
     </React.Fragment>
   );

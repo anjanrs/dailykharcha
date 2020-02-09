@@ -27,6 +27,7 @@ const middleware = applyMiddleware(
   sagaMiddleware
   // createLogger()
 );
+
 const enhancer = compose(
   middleware,
   window.devToolsExtension ? window.devToolsExtension() : f => f

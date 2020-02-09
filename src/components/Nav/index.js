@@ -15,9 +15,9 @@ import { authActions } from "../../redux/modules/auth";
 import "./style.scss";
 import withMenuitems from "../../decorators/withMenuitems";
 
-const renderNav = ({ handleNavHideShow, visibility, menuitems }) => {
+const renderNav = ({ handleNavHideShow, handleMenuItemClick, visibility, menuitems }) => {
   return (
-    <aside className={`main__nav main_nav--${visibility} horizontal`}>
+    <aside className={`main__nav main_nav--${visibility} vertical`}>
       <div className="main__nav--hide-show" onClick={handleNavHideShow}>
         {visibility === "maximized" && (
           <FontAwesomeIcon size="2x" title="cancel" icon="angle-left" />
@@ -26,7 +26,7 @@ const renderNav = ({ handleNavHideShow, visibility, menuitems }) => {
           <FontAwesomeIcon size="2x" title="cancel" icon="angle-right" />
         )}
       </div>
-      <Menus menuItems={menuitems} />
+      <Menus menuItems={menuitems} onMenuItemClick={handleMenuItemClick}/>
     </aside>
   );
 };
@@ -50,6 +50,10 @@ const Nav = compose(
       } else {
         props.setVisibility("maximized");
       }
+    },
+    handleMenuItemClick: props => event => param => {
+      console.log(event);
+      console.log(param);
     }
   }),
   pure

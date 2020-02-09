@@ -5,6 +5,10 @@
   border-radius: 4px;
   padding: 20px;
   box-shadow: 0px 2px 9px 1px #ece8e8;
+  .login-error {
+    color: red;
+    padding: 12px 20px;
+  }
   .login-header {
     text-align: center;
     background: #0062cc;

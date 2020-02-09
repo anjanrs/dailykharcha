@@ -1,3 +1,10 @@
-html {
-  font-size: 14px;
+html, body {
+  font-family: 'Bangers', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  input, select, textarea {
+    padding: 2px 8px;
+    min-height: 30px;
+  }
 }

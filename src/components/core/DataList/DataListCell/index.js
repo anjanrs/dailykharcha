@@ -57,7 +57,7 @@ const renderDataListCell = ({
             type={controlType}
           />
         )}
-        <ValidationMsgs messages={invalidMsgs.toJS()} />
+        <ValidationMsgs messages={invalidMsgs && invalidMsgs.toJS()} />
       </div>
     )
   );

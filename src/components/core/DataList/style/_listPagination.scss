@@ -1,22 +1,24 @@
 .list {
   .list__pagination {
-    background-color: #dee2e6;
+    // background-color: #dee2e6;
     position: absolute;
     bottom: 0;
     display: table;
     width: 100%;
 
-    border-bottom: 1px solid #818182;
+    // border-bottom: 1px solid #818182;
     list-style: none;
     margin: 0;
     padding: 5px 10px;
     .list__pagination--info {
       float: left;
+      margin-top: 5px;
     }
     .list__pagination--paging {
       float: right;
       .list__pagination__previous,
       .list__pagination__next {
+        margin-top: 5px;
         display: block;
         float: left;
         text-decoration: underline;
@@ -28,11 +30,13 @@
       }
 
       ul.list__pagination__numbers {
+        
         padding: 0 10px;
         display: block;
         float: left;
         margin: 0;
         li {
+          margin-top: 5px;
           display: block;
           float: left;
           padding: 0 5px;

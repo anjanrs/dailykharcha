@@ -5,10 +5,12 @@ import { compose } from "redux";
 import withAuth from "../../decorators/withAuth";
 import withNavigation from "../../decorators/withNavigation";
 import DailyExpenseList from "./DailyExpenseList";
+// import { withHandlers } from 'recompose';
 
 const DailyExpenseListPage = ({ auth }) => {
   return (
     <div className="page-content">
+      <h1>Daily Expense List Page</h1>
       <DailyExpenseList auth={auth} />
     </div>
   );

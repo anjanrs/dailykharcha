@@ -10,9 +10,13 @@ const INITAIAL_STATE = fromJS({
 });
 
 export default function(state = INITAIAL_STATE, action) {
+  
+  state = state.set("processing", false);
+  state = state.set("errorMessage", "");
   switch (action.type) {
     case types.LOGIN_IN_PROGRESS:
       state = state.set("authenticated", false);
+      state = state.set("processing", true);
       break;
     case types.LOGIN_SUCCESS:
       state = state.set("authenticated", true);
@@ -23,6 +27,7 @@ export default function(state = INITAIAL_STATE, action) {
       break;
     case types.LOGOUT_SUCCESS:
       state = state.set("authenticated", false);
+      state = state.set("errorMessage", "");
       break;
     case types.FETCH_CURRENT_USER_PERMISSIONS_SUCCESS:
       //check the permissions returned from api
