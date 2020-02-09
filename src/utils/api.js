@@ -5,9 +5,9 @@ const apiUrl = "http://localhost:3090/";
 
 export default {
   post: ({ params, endpoint }) => {
-    axios.defaults.headers.common["authorization"] = localStorage.getItem(
-      "token"
-    );
+    // axios.defaults.headers.common["authorization"] = localStorage.getItem(
+    //   "token"
+    // );
     return axios.post(apiUrl + endpoint, params).then(res => res.data);
   }
 };

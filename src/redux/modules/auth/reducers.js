@@ -2,7 +2,7 @@ import types from "./types.js";
 import { fromJS } from "immutable";
 
 const INITAIAL_STATE = fromJS({
-  authenticated: localStorage.getItem("token"),
+  authenticated: false,
   errorMessage: "",
   processing: false,
   permissions: null,

@@ -12,8 +12,7 @@ function* loginRequest(action) {
       params: action.payload,
       endpoint: "signin"
     });
-
-    localStorage.setItem("token", res.token);
+    // localStorage.setItem("token", res.token);
     yield put({ type: types.LOGIN_SUCCESS, payload: { data: res } });
     browserHistory.push("/dashboard");
   } catch (e) {
@@ -22,7 +21,11 @@ function* loginRequest(action) {
 }
 
 function* logoutRequest(action) {
-  localStorage.removeItem("token");
+  // localStorage.removeItem("token");
+  const res = yield call(api.post, {
+    params: action.payload,
+    endpoint: "signout"
+  });
   yield put({ type: types.LOGOUT_SUCCESS });
 }
 
