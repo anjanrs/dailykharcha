@@ -8,6 +8,7 @@ export default {
     // axios.defaults.headers.common["authorization"] = localStorage.getItem(
     //   "token"
     // );
+    axios.defaults.withCredentials = true
     return axios.post(apiUrl + endpoint, params).then(res => res.data);
   }
 };
