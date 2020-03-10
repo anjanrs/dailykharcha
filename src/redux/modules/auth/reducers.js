@@ -1,8 +1,8 @@
 import types from "./types.js";
 import { fromJS } from "immutable";
-
+console.log(Object.keys(localStorage));
 const INITAIAL_STATE = fromJS({
-  authenticated: localStorage.getItem("authenticated"),
+  authenticated: !!localStorage.getItem("authenticated"),
   errorMessage: "",
   processing: false,
   permissions: null,

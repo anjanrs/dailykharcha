@@ -7,7 +7,7 @@ const apiUrl = "http://localhost:3090/";
 export default {
   post: ({ params, endpoint }) => {
     axios.defaults.withCredentials = true;
-    if(!empty(localStorage.getItem("authenticity_token"))) {
+    if(!!(localStorage.getItem("authenticity_token"))) {
       axios.defaults.headers.common["authenticity_token"] = localStorage.getItem("authenticity_token");
     }
     return axios.post(apiUrl + endpoint, params).then(res => {
