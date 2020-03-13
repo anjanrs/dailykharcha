@@ -1,4 +1,11 @@
 import React from "react";
+import { compose, pure } from "recompose";
+import { connect } from "react-redux";
+
+import { authActions } from "./redux/modules/auth";
+import withPermissions from "./decorators/withPermissions";
+
+
 // import { ToastContainer } from "react-toastify";
 // import logo from "./logo.svg";
 // import "./App.css";
@@ -29,8 +36,10 @@ library.add(
   faTimesCircle
 );
 
-export default ({ children }) => {
+const renderApp = ({ children, auth }) => {
+  const initAuth = auth.toJS();
   return (
+    initAuth.onloadAuthentication && (
     <div>
       <ToastContainer
         position="top-right"
@@ -39,6 +48,22 @@ export default ({ children }) => {
         transition={Flip}
       />
       {children}
-    </div>
+    </div>)
   );
 };
+
+
+const mapStateToProps = state => ({ auth: state.auth });
+
+const withConnect =  connect(
+  mapStateToProps,
+  authActions
+);
+const App = compose(
+  withConnect,
+  // withLifeCycle,
+  withPermissions,
+  pure
+)(renderApp);
+
+export default App;

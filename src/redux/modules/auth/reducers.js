@@ -2,7 +2,8 @@ import types from "./types.js";
 import { fromJS } from "immutable";
 console.log(Object.keys(localStorage));
 const INITAIAL_STATE = fromJS({
-  authenticated: !!localStorage.getItem("authenticated"),
+  onloadAuthentication: false,
+  authenticated: false, //!!localStorage.getItem("authenticated"),
   errorMessage: "",
   processing: false,
   permissions: null,
@@ -29,9 +30,12 @@ export default function(state = INITAIAL_STATE, action) {
       state = state.set("authenticated", false);
       state = state.set("errorMessage", "");
       break;
+    
     case types.FETCH_CURRENT_USER_PERMISSIONS_SUCCESS:
       //check the permissions returned from api
       //and set the state permissions accordingly
+      state = state.set('onloadAuthentication', true);
+      state = state.set('authenticated', true);
       const retrivedPermissions = action.payload;
       const permissions = {
         read: retrivedPermissions.some(
@@ -49,6 +53,10 @@ export default function(state = INITAIAL_STATE, action) {
       };
       state = state.set("permissions", fromJS(permissions));
       break;
+    case types.FETCH_CURRENT_USER_PERMISSIONS_FAILED:
+      state = state.set('onloadAuthentication', true);
+      state = state.set('authenticated', false);
+    break;
     case types.FETCH_CURRENT_USER_MENUITEMS_SUCCESS:
       const logoutMenu = fromJS({
         id: "1000",

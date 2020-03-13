@@ -13,7 +13,7 @@ function* loginRequest(action) {
       endpoint: "signin"
     });
     // localStorage.setItem("token", res.token);
-    localStorage.setItem("authenticated", true);
+    // localStorage.setItem("authenticated", true);
     yield put({ type: types.LOGIN_SUCCESS, payload: { data: res } });
     browserHistory.push("/dashboard");
   } catch (e) {
@@ -23,7 +23,7 @@ function* loginRequest(action) {
 
 function* logoutRequest(action) {
   // localStorage.removeItem("token");
-  localStorage.removeItem("authenticated");
+  // localStorage.removeItem("authenticated");
   localStorage.removeItem("authenticity_token");
   const res = yield call(api.post, {
     params: action.payload,

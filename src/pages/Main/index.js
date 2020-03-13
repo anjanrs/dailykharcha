@@ -3,8 +3,8 @@ import { Router, Route } from "react-router-dom";
 import LoginPage from "../LoginPage";
 import Dashboard from "../Dashboard";
 import browserHistory from "../../browserHistory";
-import { compose } from "recompose";
-import { connect } from "react-redux";
+// import { compose, lifecycle, pure } from "recompose";
+// import { connect } from "react-redux";
 
 import ExpenseTypeListPage from "../ExpenseTypeListPage";
 import LogoutPage from "../LogoutPage";
@@ -19,13 +19,16 @@ import UserListPage from "../UserListPage";
 import UserGroupListPage from "../UserGroupListPage";
 import MenuItemListPage from "../MenuItemListPage";
 
-import { authActions } from "../../redux/modules/auth";
-import withPermissions from "../../decorators/withPermissions";
+// import { authActions } from "../../redux/modules/auth";
+// import withPermissions from "../../decorators/withPermissions";
+
 
 import "./style.scss";
 
-const renderMain = prop => {
+const Main = props => {
+  // const initAuth = props.auth.toJS();
   return (
+    // initAuth.onloadAuthentication && 
     <Router history={browserHistory}>
       <div className="main">
         <Route path="/login" exact component={LoginPage} />
@@ -74,14 +77,17 @@ const renderMain = prop => {
     </Router>
   );
 };
-const mapStateToProps = state => ({ auth: state.auth });
+// const mapStateToProps = state => ({ auth: state.auth });
 
-const Main = compose(
-  connect(
-    mapStateToProps,
-    authActions
-  ),
-  withPermissions
-)(renderMain);
+
+// const withConnect =  connect(
+//   mapStateToProps,
+//   authActions
+// );
+// const Main = compose(
+//   withConnect,
+//   // withPermissions,
+//   pure
+// )(renderMain);
 
 export default Main;
